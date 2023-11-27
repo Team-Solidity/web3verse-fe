@@ -8,7 +8,7 @@ const Profile = () => {
   const posts = [
     {
       id:0,
-      name : "https://wallpapercave.com/wp/wp5071838.jpg"
+      name : "https://imgs.search.brave.com/JgGgbXZier8Mo3jURxKDuzdUXiZHynQ2FDFDX_K9NcY/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzZXQuY29t/L3cvZnVsbC9hLzkv/Yi8xMTAxMTIuanBn"
     },
     {
       id:1,
@@ -38,7 +38,7 @@ const Profile = () => {
 
           <div class="h-40">
               <h2 class="text-6xl font-bold mb-2">
-                Hanumant Jain
+                Yamate Kudasai
               </h2>
               <h2 class="text-2xl mb-2">
                 Address : {address}
