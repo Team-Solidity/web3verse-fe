@@ -1,8 +1,30 @@
 import React from "react";
 import { useAccount } from 'wagmi'
 
+
 const Profile = () => {
   const { address } = useAccount()
+
+  const posts = [
+    {
+      id:0,
+      name : "https://wallpapercave.com/wp/wp5071838.jpg"
+    },
+    {
+      id:1,
+      name : "https://wallpapercave.com/wp/wp5071838.jpg"
+    },
+    {
+      id:2,
+      name : "https://wallpapercave.com/wp/wp5071838.jpg"
+    },{
+      id:3,
+      name : "https://wallpapercave.com/wp/wp5071838.jpg"
+    },
+    {
+      id:4,
+      name : "https://wallpapercave.com/wp/wp5071838.jpg"
+    }]
   return (
     <>
       <div className="overflow min-h-screen max-h-screen overflow-y-auto pt-24">
@@ -37,15 +59,40 @@ const Profile = () => {
               </ul> */}
           </div>
         </header>
-        <div className="px-20">
+        <div className="px-20 mb-10">
           Description
         </div>
 
         <hr className="h-1 bg-black"/>
+
+        <div>
+          <h1 className="h-15 bg-slate-400 text-center text-4xl p-2">Posts</h1>
+          <hr className="h-1 bg-black"/>
+        </div>
+        <div className="p-1">
+          <div class="grid grid-cols-3 gap-1">
+            <Posts posts = {posts} />
+          </div>
+        </div>
         </div>
       </div>
+
     </>
   );
+
+  function Posts(props){
+      const posts = props.posts
+      return(
+        <>
+        {posts.map((posts) =>
+            (
+              <div key={posts.id}>
+                <img src={posts.name} alt="post" />
+              </div>
+          ))}
+        </>
+      )
+  }
 };
 
 export default Profile;
