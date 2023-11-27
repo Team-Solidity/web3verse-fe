@@ -10,8 +10,14 @@ import {
 } from "react-feather";
 // import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useWeb3Modal } from '@web3modal/wagmi/react'
+import { useAccount } from 'wagmi'
+
 
 const SideNavBar = () => {
+  const { open } = useWeb3Modal()
+  const { isDisconnected } = useAccount()
+
   return (
     <>
       <div className="pt-24 bg-black text-white text-9xl min-h-screen max-h-screen border-[#bababa5e] border-r-2">
@@ -152,9 +158,16 @@ const SideNavBar = () => {
           </div>
 
           <div className="mb-12">
-            <button className="bg-[#daa520] p-4 rounded-2xl text-3xl font-bold flex items-center text-gray-300">
+            { isDisconnected ?
+            <button className="bg-[#daa520] p-4 rounded-2xl text-3xl font-bold flex items-center text-gray-300"
+                  onClick={()=>open()}>
               Connect Wallet
             </button>
+            : <button className="bg-[#daa520] p-4 rounded-2xl text-3xl font-bold flex items-center text-gray-300"
+            onClick={()=>open()}>
+            DisConnect Wallet
+            </button>
+            }
           </div>
         </div>
       </div>

@@ -9,10 +9,21 @@ import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
 import Profile from "./pages/Profile";
 import Create from "./pages/Create";
+import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi/react'
+import { WagmiConfig } from 'wagmi'
+import { mainnet } from 'wagmi/chains'
+
+const projectId = 'f258c2ecb7bc83d2ea3082228dcab33d'
+
+const chains = [mainnet]
+const wagmiConfig = defaultWagmiConfig({ chains, projectId })
+
+createWeb3Modal({ wagmiConfig, projectId, chains })
 
 function App() {
   return (
     <>
+     <WagmiConfig config={wagmiConfig}>
     <BrowserRouter>
       <NavBar />
       <div className="flex">
@@ -33,6 +44,7 @@ function App() {
         
       </div>
       </BrowserRouter>
+      </WagmiConfig>
     </>
   );
 }
