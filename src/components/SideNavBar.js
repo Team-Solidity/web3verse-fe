@@ -102,9 +102,9 @@ const SideNavBar = () => {
 
   return (
     <>
-      <div className="pt-24 bg-black text-white text-9xl min-h-screen max-h-screen border-[#bababa5e] border-r-2">
+      <div className="pt-24 bg-black text-white text-xl min-h-screen max-h-screen border-[#bababa5e] border-r-2">
         <div className="flex flex-col w-2/3 mx-auto text-white mt-20">
-          <div className="mb-12">
+          <div className="mb-8">
             <NavLink
               style={({ isActive }) => {
                 return {
@@ -117,13 +117,13 @@ const SideNavBar = () => {
                 };
               }}
               to="/"
-              className="tracking-wide text-3xl font-bold flex items-center text-gray-300 hover:text-white font-mono"
+              className="tracking-wide text-lg md:text-xl flex items-center text-gray-300 hover:text-white font-mono"
             >
-              <Home className="w-10 h-10 mr-6" />
+              <Home className="w-10 h-10 mr-6 md:w-6 md:h-6" />
               Home
             </NavLink>
           </div>
-          <div className="mb-12">
+          <div className="mb-8">
             <NavLink
               style={({ isActive }) => {
                 return {
@@ -136,13 +136,13 @@ const SideNavBar = () => {
                 };
               }}
               to="/search"
-              className="tracking-wide text-3xl font-bold flex items-center text-gray-300 hover:text-white font-mono"
+              className="tracking-wide text-lg md:text-xl flex items-center text-gray-300 hover:text-white font-mono"
             >
-              <Search className="w-10 h-10 mr-6" />
+              <Search className="w-10 h-10 mr-6 md:w-6 md:h-6" />
               Search
             </NavLink>
           </div>
-          <div className="mb-12">
+          <div className="mb-8">
             <NavLink
               style={({ isActive }) => {
                 return {
@@ -154,13 +154,13 @@ const SideNavBar = () => {
                 };
               }}
               to="/messages"
-              className="tracking-wide text-3xl font-bold flex items-center text-gray-300 hover:text-white font-mono"
+              className="tracking-wide text-lg md:text-xl  flex items-center text-gray-300 hover:text-white font-mono"
             >
-              <MessageCircle className="w-10 h-10 mr-6" />
+              <MessageCircle className="w-10 h-10 mr-6 md:w-6 md:h-6" />
               Messages
             </NavLink>
           </div>
-          <div className="mb-12">
+          <div className="mb-8">
             <NavLink
               style={({ isActive }) => {
                 return {
@@ -172,9 +172,9 @@ const SideNavBar = () => {
                 };
               }}
               to="/create"
-              className="tracking-wide text-3xl font-bold flex items-center text-gray-300 hover:text-white font-mono"
+              className="tracking-wide text-lg md:text-xl flex items-center text-gray-300 hover:text-white font-mono"
             >
-              <PlusCircle className="w-10 h-10 mr-6" />
+              <PlusCircle className="w-10 h-10 mr-6 md:w-6 md:h-6" />
               Create
             </NavLink>
           </div>
@@ -197,7 +197,7 @@ const SideNavBar = () => {
               Notifications
             </NavLink>
           </div> */}
-          <div className="mb-12">
+          <div className="mb-8">
             <NavLink
               style={({ isActive }) => {
                 return {
@@ -210,14 +210,14 @@ const SideNavBar = () => {
                 };
               }}
               to="/settings"
-              className="tracking-wide text-3xl font-bold flex items-center text-gray-300 hover:text-white font-mono"
+              className="tracking-wide text-lg md:text-xl flex items-center text-gray-300 hover:text-white font-mono"
             >
-              <Settings className="w-10 h-10 mr-6" />
+              <Settings className="w-10 h-10 mr-6 md:w-6 md:h-6" />
               Settings
             </NavLink>
           </div>
 
-          <div className="mb-12">
+          <div className="mb-8">
             <NavLink
               style={({ isActive }) => {
                 return {
@@ -230,9 +230,9 @@ const SideNavBar = () => {
                 };
               }}
               to="/profile"
-              className="tracking-wide text-3xl font-bold flex items-center text-gray-300 hover:text-white font-mono"
+              className="tracking-wide text-lg md:text-xl flex items-center text-gray-300 hover:text-white font-mono"
             >
-              <User className="w-10 h-10 mr-6" />
+              <User className="w-10 h-10 mr-6 md:w-6 md:h-6" />
               Profile
             </NavLink>
           </div>
@@ -241,15 +241,15 @@ const SideNavBar = () => {
             <div className="mb-2">
               <button
                 onClick={connectWallet}
-                className="bg-[#daa520] p-4 rounded-2xl text-3xl font-bold flex items-center text-gray-300"
+                className="bg-[#daa520] p-4 md:p-3 font-bold  rounded-2xl text-lg md:text-xl flex items-center text-gray-300"
               >
                 Connect Wallet
               </button>
             </div>
           ) : (
-            <div className="mb-12">
-              <div className="tracking-wide text-3xl font-bold flex items-center text-gray-300 hover:text-white">
-                <img src={ape} alt=" " className="h-20 rounded-full mr-6" />
+            <div className="mt-12">
+              <div className="tracking-wide text-lg md:text-2xl flex items-center text-gray-300 hover:text-white">
+                <img src={ape} alt=" " className="h-12 rounded-full mr-2" />
                 <h1>{dataFromContract}</h1>
               </div>
             </div>

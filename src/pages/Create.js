@@ -108,49 +108,49 @@ const Create = () => {
   // };
   return (
     <>
-      <div className="overflow min-h-screen max-h-screen overflow-y-auto pt-24 bg-black ttt">
+      <div className="overflow min-h-screen max-h-screen overflow-y-auto pt-10 bg-black ttt">
         <div className=" text-white min-h-screen w-1/2 mx-auto py-24">
           <label className="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" value={toggled} className="sr-only peer" onClick={toggle} />
-            <div className="w-14 h-8 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-yellow-300 dark:peer-focus:ring-yellow-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-7 after:w-7 after:transition-all dark:border-gray-600 peer-checked:bg-yellow-400"></div>
-            <span className="ms-3 text-xl font-medium font-mono text-white ">
+            <div className="w-12 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-3 peer-focus:ring-yellow-300 dark:peer-focus:ring-yellow-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-yellow-400"></div>
+            <span className="ms-3 text-lg font-medium font-mono text-white ">
               Are You posting this as an NFT?
             </span>
           </label>
-          <h1 className="m-2 text-2xl font-mono mb-2 mt-5">Title -</h1>
+          <h1 className="m-2 text-lg font-mono mb-2 mt-5">Title -</h1>
           <div className="flex rounded-full bg-[#f8f3c1] px-4">
             <input
               type="text"
-              className="w-full h-16 text-2xl flex bg-transparent pl-2 text-[#000] outline-0"
+              className="w-full h-12 text-lg flex bg-transparent pl-2 text-[#000] outline-0"
               placeholder="Title..."
               onChange={handleTitle}
               value={title}
             />
           </div>
-          <h1 className=" ml-2 text-2xl font-mono mb-2 mt-5">Description -</h1>
+          <h1 className=" ml-2 text-lg font-mono mb-2 mt-5">Description -</h1>
           <div className="flex rounded-full bg-[#f8f3c1] px-4">
             <input
               type="text"
               value={description}
-              className="w-full h-16 text-2xl flex bg-transparent pl-2 text-[#000] outline-0"
+              className="w-full h-12 text-lg flex bg-transparent pl-2 text-[#000] outline-0"
               placeholder="Description..."
               onChange={handleDescription}
             />
           </div>
           <div className=" mb-2 mt-5">
             <div className="flex gap-5">
-              <h1 className=" ml-2 text-2xl font-mono mb-4">Upload image -</h1>
+              <h1 className=" ml-2 text-lg font-mono mb-4">Upload image -</h1>
             </div>
 
             {selectedImage ? (
               <div className="flex items-center justify-center">
-                <img width={450} height={450} src={selectedImage2} alt="" />
+                <img width={400} height={400} src={selectedImage2} alt="" />
               </div>
             ) : (
               <div className="flex items-center justify-center w-full">
                 <label
                   htmlFor="dropzone-file"
-                  className="flex flex-col items-center justify-center w-full h-64 border-2 border-#f8f3c1 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:#f8f3c1 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                  className="flex flex-col items-center justify-center w-full h-48 border-2 border-#f8f3c1 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:#f8f3c1 dark:hover:border-gray-500 dark:hover:bg-gray-600"
                 >
                   <div className="flex flex-col items-center justify-center pt-5 pb-6">
                     <svg
@@ -189,7 +189,7 @@ const Create = () => {
           <div className="ml-5 mt-10 flex items-center justify-center">
             <button
               onClick={handleFileUpload}
-              className="bg-[#daa520] px-32 p-4 rounded-2xl text-2xl font-bold flex items-center text-gray-200"
+              className="bg-[#daa520] px-32 p-3 rounded-2xl text-xl font-bold flex items-center text-gray-200"
               type="submit"
             >
               Create Post

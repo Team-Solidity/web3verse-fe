@@ -13,29 +13,6 @@ const Profile = () => {
   const username = useSelector((state) => state.profile.username);
   const [pos, setPosts] = useState(null);
 
-  // const posts = [
-  //   {
-  //     id: 0,
-  //     name: "https://imgs.search.brave.com/JgGgbXZier8Mo3jURxKDuzdUXiZHynQ2FDFDX_K9NcY/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzZXQuY29t/L3cvZnVsbC9hLzkv/Yi8xMTAxMTIuanBn",
-  //   },
-  //   {
-  //     id: 1,
-  //     name: "https://wallpapercave.com/wp/wp5071838.jpg",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "https://wallpapercave.com/wp/wp5071838.jpg",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "https://wallpapercave.com/wp/wp5071838.jpg",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "https://wallpapercave.com/wp/wp5071838.jpg",
-  //   },
-  // ];
-
   useEffect(()=>{
 
     const fetchPosts = async () =>{
@@ -59,7 +36,7 @@ const Profile = () => {
   return (
     <>
       <div className="ttt overflow min-h-screen max-h-screen overflow-y-auto pt-24 bg-black">
-        <div className=" text-black text-2xl min-h-screen">
+        <div className=" text-black text-xl min-h-screen">
           <header className="flex flex-wrap items-center gap-10 px-20 py-8">
             <div>
               <img
@@ -71,8 +48,8 @@ const Profile = () => {
             </div>
 
             <div class="h-40">
-              <h2 class="text-6xl font-bold mb-2 text-white font-mono">@{username}</h2>
-              <h2 class="text-2xl mb-2 text-white font-mono">Address : {address}</h2>
+              <h2 class="text-3xl font-bold mb-2 text-white font-mono">@{username}</h2>
+              <h2 class="text-xl mb-2 text-white font-mono">Address : {address}</h2>
             </div>
           </header>
           <hr className="h-1 bg-black" />

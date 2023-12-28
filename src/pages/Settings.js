@@ -26,7 +26,7 @@ const Settings = () => {
 
   return (
     <>
-      <div className="overflow bg-black min-h-screen  max-h-screen overflow-y-auto pt-24">
+      <div className="overflow bg-black min-h-screen  max-h-screen overflow-y-auto">
         <div className=" v-screen  justify-center items-center">
         <div className=" justify-center items-center font-mono text-lg ml-72 mt-40">
       <div> 

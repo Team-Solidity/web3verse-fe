@@ -46,11 +46,13 @@ const SearchPage = () => {
               type="text"
               class=" h-10 bg-[#0d1829] text-xl flex bg-transparent pl-2 pr-44 text-black outline-0"
               onChange={(e) => setUsername(e.target.value)}
+              
               placeholder="Search"
             />
             <button
               type="submit"
               onClick={doSearch}
+              
               class="relative p-2 bg-white rounded-full"
             >
               <Search className=" text-slate-500 font-bold" />
@@ -97,8 +99,8 @@ const SearchPage = () => {
             </div>
           ))}
         {searchClicked && searchResults.length === 0 && (
-          <div class="text-center bg-white mt-8 w-44 rounded-lg items-center justify-center ml-96">
-            <p class="text-2xl font-bold text-gray-800">No user found</p>
+          <div class="text-center mt-8 ">
+            <p class="text-xl text-white">No user found</p>
           </div>
         )}
       </div>
